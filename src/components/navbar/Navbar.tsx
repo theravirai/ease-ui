@@ -32,7 +32,7 @@ const navbarVariants = cva(
   }
 );
 
-interface NavbarProps
+export interface NavbarProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof navbarVariants> {
   asChild?: boolean;
@@ -49,6 +49,7 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(
       asChild = false,
       animation = "fadeIn",
       hoverAnimation = "none",
+      children,
       ...props
     },
     ref
@@ -87,15 +88,19 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(
         onMouseLeave={handleMouseLeave}
         {...props}
       >
-        <h1>Logo</h1>
-        <div className="flex gap-5">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Customer</a>
-        </div>
-        <div>
-          <Button hoverAnimation="none">Profile</Button>
-        </div>
+        {children ?? (
+          <>
+            <h1 className="text-lg font-bold">Ease UI</h1>
+            <div className="flex gap-5">
+              <a href="#" className="hover:text-indigo-600 transition-colors">Home</a>
+              <a href="#components" className="hover:text-indigo-600 transition-colors">Components</a>
+              <a href="#docs" className="hover:text-indigo-600 transition-colors">Docs</a>
+            </div>
+            <div>
+              <Button hoverAnimation="none" size="sm">Get Started</Button>
+            </div>
+          </>
+        )}
       </Comp>
     );
   }

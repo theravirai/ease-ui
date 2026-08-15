@@ -27,7 +27,7 @@ const modalVariants = cva(
   }
 );
 
-interface ModalProps
+export interface ModalProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof modalVariants> {
   asChild?: boolean;

@@ -1,14 +1,15 @@
 import React from "react";
 import { Input, type InputProps } from "./Input";
 
-type NumberProps = Omit<InputProps, "type" | "onChange"> & {
+export interface NumberInputProps
+  extends Omit<InputProps, "type" | "onChange"> {
   onChange?: (value: number) => void;
   step?: number;
   min?: number;
   max?: number;
-};
+}
 
-export const NumberInput = React.forwardRef<HTMLInputElement, NumberProps>(
+export const NumberInput = React.forwardRef<HTMLInputElement, NumberInputProps>(
   ({ onChange, step = 1, min, max, ...props }, ref) => {
     const handleInc = () => {
       const cur = Number((ref as any)?.current?.value || props.value || 0);

@@ -3,9 +3,12 @@ import { Input, type InputProps } from "./Input";
 import { cn } from "@/libs/utils";
 import { Eye, EyeOff } from "lucide-react"; // or any icon lib
 
-type Props = Omit<InputProps, "type">;
+export interface PasswordInputProps extends Omit<InputProps, "type"> {}
 
-export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
+export const PasswordInput = React.forwardRef<
+  HTMLInputElement,
+  PasswordInputProps
+>(
   (props, ref) => {
     const [show, setShow] = useState(false);
     return (

@@ -17,7 +17,7 @@ const textareaCls = cva(
 );
 
 export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "size"> {
   label?: string;
   size?: "sm" | "md" | "lg";
 }

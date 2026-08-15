@@ -3,14 +3,17 @@ import { Input, type InputProps } from "./Input";
 import { cn } from "@/libs/utils";
 import gsap from "gsap";
 
-type Props = InputProps & {
+export interface InputWithIconProps extends InputProps {
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
   iconColor?: string;
   animated?: boolean;
-};
+}
 
-export const InputWithIcon = React.forwardRef<HTMLInputElement, Props>(
+export const InputWithIcon = React.forwardRef<
+  HTMLInputElement,
+  InputWithIconProps
+>(
   (
     {
       icon,
