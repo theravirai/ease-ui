@@ -235,14 +235,15 @@ Agents must run verification checks before completing tasks:
 | `npm run build` | Compile library bundle + generate TypeScript `.d.ts` declarations |
 | `npm run preview` | Preview production build locally |
 
-### Mandatory Verification Step
-Before completing any task involving code changes, **always run**:
+### Plan Verification Step
+Run the verification check at the **end of the full implementation plan** (after the final task in the plan has been completed):
 ```bash
 npm run build
 ```
 Ensure that:
 - TypeScript compilation (`tsconfig.lib.json`) exits with **0 errors**.
 - Vite library bundling (`dist/`) succeeds.
+- Individual intermediate tasks should focus on implementation and leave full build verification for the final task of the plan.
 
 ---
 
@@ -286,13 +287,13 @@ When instructed to implement a plan (for example, "implement `01-accordion-compo
 1. Begin with **Task 1 only**.
 2. Implement exactly one task.
 3. After completing that task:
-   - Run verification (`npm run build`).
    - Stop immediately.
    - Summarize only that task.
    - Suggest one conventional commit message for that task only.
    - Wait for explicit user confirmation.
 4. **Do not begin Task N+1 until the user explicitly confirms.**
-5. Never implement, verify, summarize, or commit multiple implementation tasks in a single execution unless the user explicitly requests it.
+5. Run full verification (`npm run build`) upon completing the final task of the plan.
+6. Never implement, verify, summarize, or commit multiple implementation tasks in a single execution unless the user explicitly requests it.
 
 ---
 
