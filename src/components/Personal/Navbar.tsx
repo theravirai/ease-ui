@@ -12,7 +12,7 @@ const Navbar = () => {
   console.log("this is theme->", mode);
 
   return (
-    <nav className="h-16 w-full flex items-center justify-between px-8">
+    <nav className="h-16 w-full flex items-center justify-between px-8 border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-30">
       <div className="flex items-center gap-10">
         <h1
           onClick={() => navigate("/")}
