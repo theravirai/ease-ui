@@ -3,6 +3,8 @@ import HomeLayout from "../layouts/HomeLayout";
 import ComponentLayout from "../layouts/ComponentLayout";
 import HomePage from "../pages/HomePage";
 import ButtonPage from "../pages/components/ButtonPage";
+import BadgePage from "@/pages/components/BadgePage";
+import TooltipPage from "@/pages/components/TooltipPage";
 import CardPage from "@/pages/components/CardPage";
 import ModalPage from "@/pages/components/ModalPage";
 import InputPage from "@/pages/components/InputPage";
@@ -27,6 +29,14 @@ const AppRouter = ({}: Props) => {
             {
               path: "button",
               element: <ButtonPage />,
+            },
+            {
+              path: "badge",
+              element: <BadgePage />,
+            },
+            {
+              path: "tooltip",
+              element: <TooltipPage />,
             },
             {
               path: "card",
