@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ComponentDemo from "../ComponentsDemo";
 import PropsTable from "@/components/Personal/PropsTable";
-import { Button } from "@/components/Button/Button";
-import { Modal } from "@/components/Modal/Modal";
+import { Button } from "@/components/Button";
+import { Modal } from "@/components/Modal";
 
 const ModalPage = () => {
   const [lightModal, setLightModal] = useState(false);

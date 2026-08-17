@@ -1,5 +1,4 @@
-// import CodeBlock from "@/components/Personal/CodeBlock";
-import { Button } from "@/components/Button/Button";
+import { Button } from "@/components/Button";
 import ComponentDemo from "../ComponentsDemo";
 import PropsTable from "@/components/Personal/PropsTable";
 
