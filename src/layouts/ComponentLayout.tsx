@@ -11,12 +11,12 @@ const ComponentLayout = ({}: Props) => {
 
   const components = [
     { name: "Button", slug: "button" },
-    { name: "Badge", slug: "badge" },
-    { name: "Tooltip", slug: "tooltip" },
     { name: "Card", slug: "card" },
     { name: "Modal", slug: "modal" },
     { name: "Input", slug: "input" },
     { name: "Navbar", slug: "navbar" },
+    { name: "Tooltip", slug: "tooltip" },
+    { name: "Badge", slug: "badge" },
   ];
 
   return (

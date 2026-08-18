@@ -10,7 +10,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
 
-  const installCommand = "npm i ease-ui lucide-react gsap";
+  const installCommand = "git clone https://github.com/theravirai/ease-ui.git";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCommand);
@@ -47,12 +47,12 @@ const HomePage = () => {
 
   const quickComponents = [
     { name: "Button", route: "/components/button", count: "8 Variants" },
-    { name: "Badge", route: "/components/badge", count: "6 Variants" },
-    { name: "Tooltip", route: "/components/tooltip", count: "4 Placements" },
     { name: "Card", route: "/components/card", count: "Interactive" },
     { name: "Modal", route: "/components/modal", count: "Animated Dialog" },
     { name: "Input", route: "/components/input", count: "Floating & Icons" },
     { name: "Navbar", route: "/components/navbar", count: "Responsive" },
+    { name: "Tooltip", route: "/components/tooltip", count: "4 Placements" },
+    { name: "Badge", route: "/components/badge", count: "6 Variants" },
   ];
 
   return (
@@ -87,7 +87,7 @@ const HomePage = () => {
             Explore Components <ArrowRight size={18} />
           </Button>
 
-          <Tooltip content="Click to copy installation command" placement="bottom">
+          <Tooltip content="Click to copy clone command" placement="bottom">
             <button
               onClick={handleCopy}
               className="flex items-center gap-3 px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 font-mono text-sm text-gray-800 transition shadow-xs"
