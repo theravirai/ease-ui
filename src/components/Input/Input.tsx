@@ -3,8 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/libs/utils";
 
 const inputVariants = cva(
-  "w-full rounded-md focus:outline-none shadow-sm transition-all duration-150 bg-white placeholder:text-gray-400",
-  // w-full bg-transparent border-b border-gray-500 pb-2 pt-6 focus:outline-none transition-all
+  "w-full rounded-md border border-gray-300 focus:outline-none shadow-xs transition-all duration-150 bg-white placeholder:text-gray-400 text-gray-900",
   {
     variants: {
       size: {
@@ -14,11 +13,11 @@ const inputVariants = cva(
       },
       tone: {
         default:
-          "border-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400",
+          "border-gray-300 focus:ring-2 focus:ring-indigo-100 focus:border-indigo-500",
         error:
-          "border-red-400 focus:ring-2 focus:ring-red-400 focus:border-red-400",
+          "border-red-400 focus:ring-2 focus:ring-red-100 focus:border-red-500",
         success:
-          "border-green-400 focus:ring-2 focus:ring-green-400 focus:border-green-400",
+          "border-emerald-400 focus:ring-2 focus:ring-emerald-100 focus:border-emerald-500",
       },
       disabled: {
         true: "bg-gray-100 text-gray-400 cursor-not-allowed opacity-80",
