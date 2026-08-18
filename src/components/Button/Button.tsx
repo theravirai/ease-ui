@@ -3,12 +3,12 @@ import React, { useEffect, useRef } from "react";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import { cn } from "@/libs/utils";
-// import gsap from "gsap";
+import gsap from "gsap";
 import { entranceAnimations } from "@/libs/animations/entranceAnimation";
 import { hoverAnimations } from "@/libs/animations/hoverAnimation";
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+export interface ButtonProps
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "size">,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   onClick?: () => void;

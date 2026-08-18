@@ -39,6 +39,15 @@ export const hoverAnimations = {
     );
   },
 
+  lift: (el: HTMLElement) => {
+    gsap.to(el, {
+      y: -4,
+      boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  },
+
   float3D: (el: HTMLElement) => {
     const img = el.querySelector("img");
     const title = el.querySelector("h3");
@@ -47,44 +56,48 @@ export const hoverAnimations = {
 
     // Base card lift + tilt
     gsap.to(el, {
-      // y: -10,
       scale: 1.03,
       rotateX: 5,
       rotateY: 2,
       transformPerspective: 700,
-      duration: 0.1,
+      duration: 0.15,
       ease: "power3.out",
     });
 
-    // Floating inner elements
-    gsap.to(img, { y: -10, scale: 1.05, duration: 0.5, ease: "power3.out" });
-    gsap.to(title, { y: -8, duration: 0.4, ease: "power3.out" });
-    gsap.to(desc, { y: -6, duration: 0.4, ease: "power3.out" });
-    gsap.to(footer, { y: -5, opacity: 1, duration: 0.4, ease: "power3.out" });
+    // Floating inner elements (null-safe)
+    if (img) gsap.to(img, { y: -10, scale: 1.05, duration: 0.5, ease: "power3.out" });
+    if (title) gsap.to(title, { y: -8, duration: 0.4, ease: "power3.out" });
+    if (desc) gsap.to(desc, { y: -6, duration: 0.4, ease: "power3.out" });
+    if (footer) gsap.to(footer, { y: -5, opacity: 1, duration: 0.4, ease: "power3.out" });
   },
 
   reset: (el: HTMLElement) => {
-    const img = el.querySelector("img");
-    const title = el.querySelector("h3");
-    const desc = el.querySelector("p");
-    const footer = el.querySelector("div:last-child");
+    const innerElements = [
+      el.querySelector("img"),
+      el.querySelector("h3"),
+      el.querySelector("p"),
+      el.querySelector("div:last-child"),
+    ].filter(Boolean);
 
     gsap.to(el, {
       y: 0,
       rotateX: 0,
       rotateY: 0,
       scale: 1,
-      duration: 0.1,
+      boxShadow: "none",
+      duration: 0.2,
       ease: "power3.inOut",
     });
 
-    gsap.to([img, title, desc, footer], {
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      duration: 0.4,
-      ease: "power3.inOut",
-    });
+    if (innerElements.length > 0) {
+      gsap.to(innerElements, {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power3.inOut",
+      });
+    }
   },
 
   wobbleFollow: (el: HTMLElement) => {
