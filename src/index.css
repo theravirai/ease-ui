@@ -1,28 +1,74 @@
 @import "tailwindcss";
+
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #2563eb;
-  /* --card-bg: #f3f4f6; */
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-body: #bbbbbb;
+  --text-muted: #7e7e7e;
+  --surface-card: #141414;
+  --surface-elevated: #222222;
+  --surface-soft: #0d0d0d;
+  --hairline: #2e2e2e;
+  
+  /* BMW M Tricolor Brand Tokens */
+  --m-blue-light: #0066b1;
+  --m-blue-dark: #1c69d4;
+  --m-red: #e22718;
 }
 
-[data-theme="dark"] {
-  --bg-color: #18181b;
-  --text-color: #f4f4f5;
-  --primary-color: #3b82f6;
-  --card-bg: #27272a;
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-body: #4b5563;
+  --text-muted: #9ca3af;
+  --surface-card: #f9fafb;
+  --surface-elevated: #f3f4f6;
+  --surface-soft: #f3f4f6;
+  --hairline: #e5e7eb;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.25s, color 0.25s;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BMW M Signature Tricolor Stripe */
+.m-stripe {
+  background: linear-gradient(
+    90deg,
+    #0066b1 0%,
+    #0066b1 33.33%,
+    #1c69d4 33.33%,
+    #1c69d4 66.66%,
+    #e22718 66.66%,
+    #e22718 100%
+  );
+}
+
+.m-stripe-vertical {
+  background: linear-gradient(
+    180deg,
+    #0066b1 0%,
+    #0066b1 33.33%,
+    #1c69d4 33.33%,
+    #1c69d4 66.66%,
+    #e22718 66.66%,
+    #e22718 100%
+  );
+}
+
+/* Machined letterspacing */
+.tracking-machined {
+  letter-spacing: 1.5px;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
@@ -31,5 +77,5 @@ body {
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
