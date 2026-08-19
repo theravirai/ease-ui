@@ -16,10 +16,12 @@ const themeSlice = createSlice({
       state.mode = state.mode === "light" ? "dark" : "light";
       localStorage.setItem("theme", state.mode);
       document.documentElement.setAttribute("data-theme", state.mode);
+      document.documentElement.classList.toggle("dark", state.mode === "dark");
     },
     setTheme: (state, action) => {
       state.mode = action.payload;
       document.documentElement.setAttribute("data-theme", action.payload);
+      document.documentElement.classList.toggle("dark", action.payload === "dark");
     },
   },
 });
