@@ -20,11 +20,11 @@ const ComponentLayout = ({}: Props) => {
   ];
 
   return (
-    <div className="flex min-h-[calc(100vh-4.25rem)] bg-black text-white">
+    <div className="flex min-h-[calc(100vh-4.25rem)] bg-white dark:bg-black text-gray-900 dark:text-white transition-colors">
       {/* Mobile Backdrop */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-xs z-30 md:hidden"
+          className="fixed inset-0 bg-black/60 backdrop-blur-xs z-30 md:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -33,22 +33,22 @@ const ComponentLayout = ({}: Props) => {
       <aside
         className={`
           w-64 flex flex-col
-          border-r border-neutral-800 bg-neutral-950/80 backdrop-blur-md
+          border-r border-gray-200 bg-white/90 dark:border-neutral-800 dark:bg-neutral-950/80 backdrop-blur-md
           fixed md:sticky top-[4.25rem] left-0 h-[calc(100vh-4.25rem)] z-30
           transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} 
           transition-transform duration-300 ease-in-out
           md:translate-x-0 overflow-y-auto p-6
         `}
       >
-        <div className="flex items-center justify-between mb-8 pb-3 border-b border-neutral-900">
+        <div className="flex items-center justify-between mb-8 pb-3 border-b border-gray-100 dark:border-neutral-900">
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-3.5 bg-[#1c69d4]" />
-            <h2 className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+            <h2 className="text-[11px] font-extrabold uppercase tracking-[2px] text-gray-500 dark:text-neutral-400 font-mono">
               COMPONENTS
             </h2>
           </div>
           <button
-            className="md:hidden text-neutral-400 hover:text-white"
+            className="md:hidden text-gray-400 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white"
             onClick={() => setSidebarOpen(false)}
           >
             <X size={18} />
@@ -67,8 +67,8 @@ const ComponentLayout = ({}: Props) => {
                 }}
                 className={`relative cursor-pointer px-4 py-2.5 rounded-none text-xs uppercase tracking-[1.5px] font-bold transition-all duration-150 select-none ${
                   isActive
-                    ? "bg-neutral-900 text-white font-extrabold before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-[#0066b1] before:via-[#1c69d4] before:to-[#e22718]"
-                    : "text-neutral-400 hover:text-white hover:bg-neutral-900/60"
+                    ? "bg-gray-100 dark:bg-neutral-900 text-gray-900 dark:text-white font-extrabold before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-[#0066b1] before:via-[#1c69d4] before:to-[#e22718]"
+                    : "text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900/60"
                 }`}
               >
                 {item.name}
@@ -79,9 +79,9 @@ const ComponentLayout = ({}: Props) => {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 min-w-0 p-6 md:p-12 overflow-y-auto bg-black">
+      <main className="flex-1 min-w-0 p-6 md:p-12 overflow-y-auto bg-white dark:bg-black transition-colors">
         <button
-          className="md:hidden mb-6 flex items-center gap-2 px-3 py-1.5 border border-neutral-800 bg-neutral-900 text-xs uppercase tracking-wider text-neutral-300 hover:text-white"
+          className="md:hidden mb-6 flex items-center gap-2 px-3 py-1.5 border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900 text-xs uppercase tracking-wider text-gray-700 dark:text-neutral-300 hover:text-black dark:hover:text-white"
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
           <Menu size={16} />

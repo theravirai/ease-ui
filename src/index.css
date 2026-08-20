@@ -16,15 +16,26 @@
   --m-red: #e22718;
 }
 
-[data-theme="light"] {
+html.dark, [data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-body: #bbbbbb;
+  --text-muted: #7e7e7e;
+  --surface-card: #141414;
+  --surface-elevated: #222222;
+  --surface-soft: #0d0d0d;
+  --hairline: #2e2e2e;
+}
+
+html:not(.dark), [data-theme="light"] {
   --bg-color: #ffffff;
-  --text-color: #000000;
-  --text-body: #4b5563;
-  --text-muted: #9ca3af;
-  --surface-card: #f9fafb;
-  --surface-elevated: #f3f4f6;
-  --surface-soft: #f3f4f6;
-  --hairline: #e5e7eb;
+  --text-color: #0f172a;
+  --text-body: #475569;
+  --text-muted: #94a3b8;
+  --surface-card: #ffffff;
+  --surface-elevated: #f8fafc;
+  --surface-soft: #f1f5f9;
+  --hairline: #e2e8f0;
 }
 
 body {

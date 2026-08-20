@@ -60,23 +60,23 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="text-center space-y-8 pt-6 pb-2">
         {/* Brand Tag Pill */}
-        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-none bg-neutral-900/90 border border-neutral-800 shadow-xl">
+        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-none bg-gray-100 dark:bg-neutral-900/90 border border-gray-200 dark:border-neutral-800 shadow-xl transition-colors">
           <div className="w-1.5 h-3.5 m-stripe-vertical" />
-          <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-300 font-mono">
+          <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-gray-700 dark:text-neutral-300 font-mono">
             EASE /// M MOTORSPORT MOTION SYSTEM
           </span>
         </div>
 
         {/* Display Headline */}
         <div className="space-y-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase text-white leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase text-gray-900 dark:text-white leading-tight">
             ENGINEERED FOR SPEED. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-neutral-200 dark:to-neutral-400">
               CRAFTED FOR PRECISION.
             </span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 font-light leading-relaxed">
+          <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-600 dark:text-neutral-400 font-light leading-relaxed">
             A production-ready React component library combining high-performance
             GSAP motion physics, Tailwind CSS v4 styling, and Radix UI composition primitives.
           </p>
@@ -89,7 +89,7 @@ const HomePage = () => {
             variant="primary"
             hoverAnimation="lift"
             onClick={() => navigate("/components/button")}
-            className="rounded-none uppercase tracking-[1.5px] font-bold px-8 py-3.5 bg-white text-black hover:bg-neutral-200 transition-colors flex items-center gap-3 cursor-pointer"
+            className="rounded-none uppercase tracking-[1.5px] font-bold px-8 py-3.5 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors flex items-center gap-3 cursor-pointer"
           >
             EXPLORE COMPONENTS <ArrowRight size={16} />
           </Button>
@@ -97,14 +97,14 @@ const HomePage = () => {
           <Tooltip content="Click to copy repository clone command" placement="bottom">
             <button
               onClick={handleCopy}
-              className="flex items-center gap-3 px-6 py-3.5 rounded-none border border-neutral-800 bg-neutral-950 hover:bg-neutral-900 hover:border-neutral-700 font-mono text-xs text-neutral-300 transition-all cursor-pointer shadow-lg"
+              className="flex items-center gap-3 px-6 py-3.5 rounded-none border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-950 hover:bg-gray-100 dark:hover:bg-neutral-900 hover:border-gray-300 dark:hover:border-neutral-700 font-mono text-xs text-gray-800 dark:text-neutral-300 transition-all cursor-pointer shadow-lg"
             >
-              <code className="text-[#1c69d4]">$</code>
+              <code className="text-[#1c69d4] font-bold">$</code>
               <span>{installCommand}</span>
               {copied ? (
-                <Check size={14} className="text-emerald-400 ml-2" />
+                <Check size={14} className="text-emerald-500 dark:text-emerald-400 ml-2" />
               ) : (
-                <Code size={14} className="text-neutral-500 ml-2" />
+                <Code size={14} className="text-gray-400 dark:text-neutral-500 ml-2" />
               )}
             </button>
           </Tooltip>
@@ -112,15 +112,15 @@ const HomePage = () => {
 
         {/* Live Interactive Testing Track */}
         <div className="pt-6 max-w-4xl mx-auto">
-          <div className="relative rounded-none border border-neutral-800 bg-neutral-950 p-8 shadow-2xl overflow-hidden">
+          <div className="relative rounded-none border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-8 shadow-2xl overflow-hidden transition-colors">
             {/* Top M-Stripe Accent */}
             <div className="absolute top-0 left-0 right-0 h-1 m-stripe" />
 
-            <div className="flex items-center justify-between pb-6 mb-6 border-b border-neutral-900">
-              <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+            <div className="flex items-center justify-between pb-6 mb-6 border-b border-gray-100 dark:border-neutral-900">
+              <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-gray-500 dark:text-neutral-400 font-mono">
                 INTERACTIVE PERFORMANCE SANDBOX
               </span>
-              <span className="text-[10px] font-mono uppercase px-2 py-0.5 bg-neutral-900 border border-neutral-800 text-neutral-400">
+              <span className="text-[10px] font-mono uppercase px-2 py-0.5 bg-gray-100 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 text-gray-600 dark:text-neutral-400">
                 LIVE DEMO
               </span>
             </div>
@@ -139,7 +139,7 @@ const HomePage = () => {
                 Telemetry
               </Badge>
               <Tooltip content="Engineered with GSAP spring physics" placement="top">
-                <Button variant="outline" size="sm" className="rounded-none uppercase tracking-wider text-xs border-neutral-700 text-white hover:bg-neutral-900">
+                <Button variant="outline" size="sm" className="rounded-none uppercase tracking-wider text-xs border-gray-300 dark:border-neutral-700 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-900">
                   Hover for Tooltip
                 </Button>
               </Tooltip>
@@ -156,10 +156,10 @@ const HomePage = () => {
             <div className="h-0.5 w-8 bg-[#1c69d4]" />
             <div className="h-0.5 w-8 bg-[#e22718]" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-[1.5px] text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-[1.5px] text-gray-900 dark:text-white">
             MOTORSPORT ENGINEERING ARCHITECTURE
           </h2>
-          <p className="text-neutral-400 max-w-xl mx-auto text-sm font-light">
+          <p className="text-gray-500 dark:text-neutral-400 max-w-xl mx-auto text-sm font-light">
             Crafted for speed, strict typing, and seamless polymorphic composition.
           </p>
         </div>
@@ -168,19 +168,19 @@ const HomePage = () => {
           {featureCards.map((feat, idx) => (
             <Card
               key={idx}
-              variant="dark"
+              variant="outline"
               size="md"
               hoverAnimation="lift"
-              className="flex flex-col justify-between border border-neutral-800 bg-neutral-950 p-6 rounded-none hover:border-neutral-600 transition-all duration-200"
+              className="flex flex-col justify-between border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-6 rounded-none hover:border-gray-400 dark:hover:border-neutral-600 transition-all duration-200"
             >
               <div className="space-y-4">
-                <div className="p-3 bg-neutral-900 border border-neutral-800 rounded-none inline-block">
+                <div className="p-3 bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 rounded-none inline-block">
                   {feat.icon}
                 </div>
-                <h3 className="font-bold text-sm tracking-[1.5px] uppercase text-white">
+                <h3 className="font-bold text-sm tracking-[1.5px] uppercase text-gray-900 dark:text-white">
                   {feat.title}
                 </h3>
-                <p className="text-xs text-neutral-400 leading-relaxed font-light">
+                <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-light">
                   {feat.description}
                 </p>
               </div>
@@ -191,12 +191,12 @@ const HomePage = () => {
 
       {/* Component Catalog Grid */}
       <section className="space-y-8 pb-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-900">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-200 dark:border-neutral-900">
           <div>
-            <h2 className="text-2xl font-extrabold uppercase tracking-[1.5px] text-white">
+            <h2 className="text-2xl font-extrabold uppercase tracking-[1.5px] text-gray-900 dark:text-white">
               COMPONENT CATALOG
             </h2>
-            <p className="text-xs text-neutral-400 uppercase tracking-wider font-mono mt-1">
+            <p className="text-xs text-gray-500 dark:text-neutral-400 uppercase tracking-wider font-mono mt-1">
               7 Production-Ready Building Blocks
             </p>
           </div>
@@ -204,7 +204,7 @@ const HomePage = () => {
             variant="outline"
             size="sm"
             onClick={() => navigate("/components/button")}
-            className="rounded-none uppercase tracking-[1.5px] text-xs border-neutral-800 text-neutral-300 hover:text-white hover:bg-neutral-900"
+            className="rounded-none uppercase tracking-[1.5px] text-xs border-gray-300 dark:border-neutral-800 text-gray-700 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-neutral-900"
           >
             VIEW FULL LIBRARY
           </Button>
@@ -215,18 +215,18 @@ const HomePage = () => {
             <div
               key={comp.name}
               onClick={() => navigate(comp.route)}
-              className="group p-5 rounded-none border border-neutral-800 bg-neutral-950 hover:bg-neutral-900/80 hover:border-white/50 cursor-pointer transition-all duration-200"
+              className="group p-5 rounded-none border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:bg-gray-50 dark:hover:bg-neutral-900/80 hover:border-gray-400 dark:hover:border-white/50 cursor-pointer transition-all duration-200"
             >
               <div className="flex items-center justify-between">
-                <h4 className="font-bold text-xs uppercase tracking-[1.5px] text-white group-hover:text-[#1c69d4] transition-colors">
+                <h4 className="font-bold text-xs uppercase tracking-[1.5px] text-gray-900 dark:text-white group-hover:text-[#1c69d4] transition-colors">
                   {comp.name}
                 </h4>
                 <ArrowRight
                   size={14}
-                  className="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all"
+                  className="text-gray-400 dark:text-neutral-500 group-hover:text-gray-900 dark:group-hover:text-white group-hover:translate-x-1 transition-all"
                 />
               </div>
-              <p className="text-[11px] text-neutral-500 mt-2 font-mono">{comp.count}</p>
+              <p className="text-[11px] text-gray-400 dark:text-neutral-500 mt-2 font-mono">{comp.count}</p>
             </div>
           ))}
         </div>
