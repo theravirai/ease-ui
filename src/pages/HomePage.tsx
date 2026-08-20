@@ -20,114 +20,147 @@ const HomePage = () => {
 
   const featureCards = [
     {
-      icon: <Sparkles className="w-6 h-6 text-indigo-600" />,
-      title: "GSAP Motion Engine",
+      icon: <Sparkles className="w-5 h-5 text-[#1c69d4]" />,
+      title: "GSAP MOTION PHYSICS",
       description:
-        "Smooth physics-based micro-interactions and entrance animations engineered right into every component.",
+        "High-performance physics-based entrance and hover micro-animations embedded directly without wrapper overhead.",
     },
     {
-      icon: <Zap className="w-6 h-6 text-indigo-600" />,
-      title: "Tailwind CSS v4",
+      icon: <Zap className="w-5 h-5 text-[#1c69d4]" />,
+      title: "TAILWIND CSS V4 & CVA",
       description:
-        "Built with the next-generation Tailwind CSS engine and class-variance-authority for strict variant typing.",
+        "Engineered on the next-gen CSS engine with strict TypeScript variant definitions and zero runtime bloat.",
     },
     {
-      icon: <Layers className="w-6 h-6 text-indigo-600" />,
-      title: "Polymorphic Slots",
+      icon: <Layers className="w-5 h-5 text-[#1c69d4]" />,
+      title: "RADIX SLOT POLYMORPHISM",
       description:
-        "Radix UI asChild primitives enable painless composition with React Router, Next.js, and custom elements.",
+        "Full asChild composition pattern enables seamless integration with React Router, Next.js, and custom wrappers.",
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
-      title: "TypeScript Strict Mode",
+      icon: <ShieldCheck className="w-5 h-5 text-[#1c69d4]" />,
+      title: "TYPESCRIPT STRICT MODE",
       description:
-        "Complete type safety with automated declaration generation and zero HTML attribute collisions.",
+        "Automated .d.ts declaration generation and zero HTML attribute collisions for rock-solid developer experience.",
     },
   ];
 
   const quickComponents = [
-    { name: "Button", route: "/components/button", count: "8 Variants" },
-    { name: "Card", route: "/components/card", count: "Interactive" },
-    { name: "Modal", route: "/components/modal", count: "Animated Dialog" },
-    { name: "Input", route: "/components/input", count: "Floating & Icons" },
-    { name: "Navbar", route: "/components/navbar", count: "Responsive" },
-    { name: "Tooltip", route: "/components/tooltip", count: "4 Placements" },
-    { name: "Badge", route: "/components/badge", count: "6 Variants" },
+    { name: "BUTTON", route: "/components/button", count: "8 Variants • GSAP Physics" },
+    { name: "CARD", route: "/components/card", count: "3D Tilt • Interactive" },
+    { name: "MODAL", route: "/components/modal", count: "Animated Dialog • Blur" },
+    { name: "INPUT", route: "/components/input", count: "Validation • Floating & Icons" },
+    { name: "NAVBAR", route: "/components/navbar", count: "Responsive • Slot Header" },
+    { name: "TOOLTIP", route: "/components/tooltip", count: "4 Placements • Spring Reveal" },
+    { name: "BADGE", route: "/components/badge", count: "6 Semantic Variants" },
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 space-y-20">
+    <div className="max-w-6xl mx-auto px-6 py-12 space-y-24">
       {/* Hero Section */}
-      <section className="text-center space-y-6 pt-8 pb-4">
-        <div className="inline-flex items-center gap-2">
-          <Badge variant="secondary" size="lg">
-            ✨ Ease UI v1.0 • Phase 1 Core Library
-          </Badge>
+      <section className="text-center space-y-8 pt-6 pb-2">
+        {/* Brand Tag Pill */}
+        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-none bg-neutral-900/90 border border-neutral-800 shadow-xl">
+          <div className="w-1.5 h-3.5 m-stripe-vertical" />
+          <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-300 font-mono">
+            EASE /// M MOTORSPORT MOTION SYSTEM
+          </span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900">
-          Modern, Accessible UI <br />
-          <span className="text-indigo-600">Powered by GSAP Motion</span>
-        </h1>
+        {/* Display Headline */}
+        <div className="space-y-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase text-white leading-tight">
+            ENGINEERED FOR SPEED. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400">
+              CRAFTED FOR PRECISION.
+            </span>
+          </h1>
 
-        <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 leading-relaxed">
-          A production-ready React component library engineered with interactive
-          physics, Tailwind CSS v4 styling, and Radix UI composition primitives.
-        </p>
+          <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 font-light leading-relaxed">
+            A production-ready React component library combining high-performance
+            GSAP motion physics, Tailwind CSS v4 styling, and Radix UI composition primitives.
+          </p>
+        </div>
 
-        {/* Action Buttons */}
+        {/* Action Controls */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <Button
             size="lg"
             variant="primary"
             hoverAnimation="lift"
             onClick={() => navigate("/components/button")}
-            className="flex items-center gap-2"
+            className="rounded-none uppercase tracking-[1.5px] font-bold px-8 py-3.5 bg-white text-black hover:bg-neutral-200 transition-colors flex items-center gap-3 cursor-pointer"
           >
-            Explore Components <ArrowRight size={18} />
+            EXPLORE COMPONENTS <ArrowRight size={16} />
           </Button>
 
-          <Tooltip content="Click to copy clone command" placement="bottom">
+          <Tooltip content="Click to copy repository clone command" placement="bottom">
             <button
               onClick={handleCopy}
-              className="flex items-center gap-3 px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 font-mono text-sm text-gray-800 transition shadow-xs"
+              className="flex items-center gap-3 px-6 py-3.5 rounded-none border border-neutral-800 bg-neutral-950 hover:bg-neutral-900 hover:border-neutral-700 font-mono text-xs text-neutral-300 transition-all cursor-pointer shadow-lg"
             >
-              <code>{installCommand}</code>
+              <code className="text-[#1c69d4]">$</code>
+              <span>{installCommand}</span>
               {copied ? (
-                <Check size={16} className="text-emerald-600" />
+                <Check size={14} className="text-emerald-400 ml-2" />
               ) : (
-                <Code size={16} className="text-gray-500" />
+                <Code size={14} className="text-neutral-500 ml-2" />
               )}
             </button>
           </Tooltip>
         </div>
 
-        {/* Live Interactive Preview Bar */}
-        <div className="pt-8 flex flex-wrap items-center justify-center gap-4 p-6 rounded-2xl border border-gray-200 bg-gradient-to-b from-gray-50/50 to-white shadow-xs max-w-3xl mx-auto">
-          <Button variant="primary" size="sm" hoverAnimation="jiggle">
-            Hover Jiggle
-          </Button>
-          <Button variant="secondary" size="sm" hoverAnimation="bounce">
-            Hover Bounce
-          </Button>
-          <Badge variant="success">Active</Badge>
-          <Badge variant="warning">Warning</Badge>
-          <Tooltip content="Tooltip works seamlessly!" placement="top">
-            <Button variant="outline" size="sm">
-              Hover for Tooltip
-            </Button>
-          </Tooltip>
+        {/* Live Interactive Testing Track */}
+        <div className="pt-6 max-w-4xl mx-auto">
+          <div className="relative rounded-none border border-neutral-800 bg-neutral-950 p-8 shadow-2xl overflow-hidden">
+            {/* Top M-Stripe Accent */}
+            <div className="absolute top-0 left-0 right-0 h-1 m-stripe" />
+
+            <div className="flex items-center justify-between pb-6 mb-6 border-b border-neutral-900">
+              <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+                INTERACTIVE PERFORMANCE SANDBOX
+              </span>
+              <span className="text-[10px] font-mono uppercase px-2 py-0.5 bg-neutral-900 border border-neutral-800 text-neutral-400">
+                LIVE DEMO
+              </span>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-5">
+              <Button variant="primary" size="sm" hoverAnimation="jiggle" className="rounded-none uppercase tracking-wider text-xs">
+                Hover Jiggle
+              </Button>
+              <Button variant="secondary" size="sm" hoverAnimation="bounce" className="rounded-none uppercase tracking-wider text-xs">
+                Hover Bounce
+              </Button>
+              <Badge variant="success" size="default" className="rounded-none uppercase tracking-wider">
+                Active System
+              </Badge>
+              <Badge variant="warning" size="default" className="rounded-none uppercase tracking-wider">
+                Telemetry
+              </Badge>
+              <Tooltip content="Engineered with GSAP spring physics" placement="top">
+                <Button variant="outline" size="sm" className="rounded-none uppercase tracking-wider text-xs border-neutral-700 text-white hover:bg-neutral-900">
+                  Hover for Tooltip
+                </Button>
+              </Tooltip>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Feature Highlights */}
-      <section className="space-y-8">
+      {/* Engineering Pillars Grid */}
+      <section className="space-y-10">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-            Engineered for Modern Web Applications
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <div className="h-0.5 w-8 bg-[#0066b1]" />
+            <div className="h-0.5 w-8 bg-[#1c69d4]" />
+            <div className="h-0.5 w-8 bg-[#e22718]" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-[1.5px] text-white">
+            MOTORSPORT ENGINEERING ARCHITECTURE
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto">
-            Everything you need to ship interactive, responsive user interfaces.
+          <p className="text-neutral-400 max-w-xl mx-auto text-sm font-light">
+            Crafted for speed, strict typing, and seamless polymorphic composition.
           </p>
         </div>
 
@@ -135,19 +168,19 @@ const HomePage = () => {
           {featureCards.map((feat, idx) => (
             <Card
               key={idx}
-              variant="light"
+              variant="dark"
               size="md"
               hoverAnimation="lift"
-              className="flex flex-col justify-between border border-gray-100 p-6 rounded-xl"
+              className="flex flex-col justify-between border border-neutral-800 bg-neutral-950 p-6 rounded-none hover:border-neutral-600 transition-all duration-200"
             >
-              <div className="space-y-3">
-                <div className="p-3 bg-indigo-50 rounded-lg inline-block">
+              <div className="space-y-4">
+                <div className="p-3 bg-neutral-900 border border-neutral-800 rounded-none inline-block">
                   {feat.icon}
                 </div>
-                <h3 className="font-semibold text-lg text-gray-900">
+                <h3 className="font-bold text-sm tracking-[1.5px] uppercase text-white">
                   {feat.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-xs text-neutral-400 leading-relaxed font-light">
                   {feat.description}
                 </p>
               </div>
@@ -156,43 +189,44 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Component Showcase Grid */}
-      <section className="space-y-8 pb-12">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      {/* Component Catalog Grid */}
+      <section className="space-y-8 pb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-900">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              Component Catalog
+            <h2 className="text-2xl font-extrabold uppercase tracking-[1.5px] text-white">
+              COMPONENT CATALOG
             </h2>
-            <p className="text-gray-500">
-              Interactive polymorphic building blocks ready for your app.
+            <p className="text-xs text-neutral-400 uppercase tracking-wider font-mono mt-1">
+              7 Production-Ready Building Blocks
             </p>
           </div>
           <Button
             variant="outline"
             size="sm"
             onClick={() => navigate("/components/button")}
+            className="rounded-none uppercase tracking-[1.5px] text-xs border-neutral-800 text-neutral-300 hover:text-white hover:bg-neutral-900"
           >
-            View All Components
+            VIEW FULL LIBRARY
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {quickComponents.map((comp) => (
             <div
               key={comp.name}
               onClick={() => navigate(comp.route)}
-              className="group p-5 rounded-xl border border-gray-200 bg-white hover:border-indigo-400 hover:shadow-md cursor-pointer transition-all duration-200"
+              className="group p-5 rounded-none border border-neutral-800 bg-neutral-950 hover:bg-neutral-900/80 hover:border-white/50 cursor-pointer transition-all duration-200"
             >
               <div className="flex items-center justify-between">
-                <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                <h4 className="font-bold text-xs uppercase tracking-[1.5px] text-white group-hover:text-[#1c69d4] transition-colors">
                   {comp.name}
                 </h4>
                 <ArrowRight
-                  size={16}
-                  className="text-gray-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all"
+                  size={14}
+                  className="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all"
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-1">{comp.count}</p>
+              <p className="text-[11px] text-neutral-500 mt-2 font-mono">{comp.count}</p>
             </div>
           ))}
         </div>
