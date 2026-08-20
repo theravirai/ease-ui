@@ -16,19 +16,23 @@ const CodeBlock = ({ code, language = "tsx" }: CodeBlockProps) => {
   };
 
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between bg-gray-900 text-gray-100 px-4 py-2 rounded-t-md">
-        <span className="text-xs font-mono uppercase">{language}</span>
+    <div className="relative rounded-none border border-neutral-800 overflow-hidden shadow-2xl">
+      <div className="flex items-center justify-between bg-neutral-900 px-5 py-2.5 border-b border-neutral-800">
+        <span className="text-[11px] font-extrabold font-mono uppercase tracking-[2px] text-neutral-400">
+          {language}
+        </span>
         <button
           onClick={copyToClipboard}
-          className="flex items-center gap-2 px-2 py-1 text-xs bg-gray-800 hover:bg-gray-700 rounded transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1 text-xs font-mono uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 text-neutral-300 hover:text-white rounded-none transition-colors cursor-pointer"
         >
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-          {copied ? "Copied!" : "Copy"}
+          {copied ? <Check size={13} className="text-emerald-400" /> : <Copy size={13} />}
+          <span>{copied ? "COPIED" : "COPY"}</span>
         </button>
       </div>
-      <pre className="bg-gray-50 border border-t-0 border-gray-200 p-4 rounded-b-md overflow-x-auto">
-        <code className="text-sm text-gray-800">{code}</code>
+      <pre className="bg-neutral-950 p-5 overflow-x-auto">
+        <code className="text-xs font-mono text-neutral-200 leading-relaxed">
+          {code}
+        </code>
       </pre>
     </div>
   );

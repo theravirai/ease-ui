@@ -9,33 +9,37 @@ interface PropsTableProps {
 
 const PropsTable = ({ data }: PropsTableProps) => {
   return (
-    <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
-      <table className="w-full">
-        <thead className="">
+    <div className="overflow-x-auto rounded-none border border-neutral-800 bg-neutral-950 shadow-xl">
+      <table className="w-full text-left">
+        <thead className="bg-neutral-900 border-b border-neutral-800">
           <tr>
-            <th className="px-4 py-3 text-left text-sm font-semibold ">Prop</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold ">Type</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold ">
-              Default
+            <th className="px-5 py-3.5 text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+              PROP
             </th>
-            <th className="px-4 py-3 text-left text-sm font-semibold ">
-              Description
+            <th className="px-5 py-3.5 text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+              TYPE
+            </th>
+            <th className="px-5 py-3.5 text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+              DEFAULT
+            </th>
+            <th className="px-5 py-3.5 text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+              DESCRIPTION
             </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-200">
+        <tbody className="divide-y divide-neutral-900">
           {data.map((row, i) => (
-            <tr key={i} className="hover:bg-gray-50 transition-colors">
-              <td className="px-4 py-3 text-sm font-mono text-blue-600">
+            <tr key={i} className="hover:bg-neutral-900/60 transition-colors">
+              <td className="px-5 py-3 text-xs font-mono font-semibold text-[#1c69d4]">
                 {row.prop}
               </td>
-              <td className="px-4 py-3 text-sm font-mono text-gray-600">
+              <td className="px-5 py-3 text-xs font-mono text-neutral-300">
                 {row.type}
               </td>
-              <td className="px-4 py-3 text-sm font-mono text-gray-500">
+              <td className="px-5 py-3 text-xs font-mono text-neutral-500">
                 {row.default}
               </td>
-              <td className="px-4 py-3 text-sm text-gray-700">
+              <td className="px-5 py-3 text-xs text-neutral-400 font-light leading-relaxed">
                 {row.description}
               </td>
             </tr>

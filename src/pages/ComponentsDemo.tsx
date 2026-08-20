@@ -12,22 +12,30 @@ const ComponentDemo = ({ children, code }: ComponentDemoProps) => {
   const [isCodeVisible, setIsCodeVisible] = useState(false);
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-xs bg-white">
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-200 bg-gray-50/80">
-        <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">Preview</span>
+    <div className="border border-neutral-800 rounded-none overflow-hidden bg-neutral-950 shadow-xl transition-all">
+      <div className="flex items-center justify-between px-5 py-3 border-b border-neutral-800 bg-neutral-900/60">
+        <div className="flex items-center gap-2">
+          <div className="w-1.5 h-1.5 bg-[#1c69d4]" />
+          <span className="text-[11px] font-extrabold uppercase tracking-[2px] text-neutral-400 font-mono">
+            PREVIEW
+          </span>
+        </div>
+
         <button
           onClick={() => setIsCodeVisible(!isCodeVisible)}
-          className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium bg-white hover:bg-gray-100 border border-gray-200 rounded-md transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-neutral-900 hover:bg-neutral-800 hover:text-white border border-neutral-700 text-neutral-300 rounded-none transition-colors cursor-pointer"
         >
           <Code size={13} />
-          {isCodeVisible ? "Hide Code" : "View Code"}
+          <span>{isCodeVisible ? "HIDE CODE" : "VIEW CODE"}</span>
         </button>
       </div>
 
-      <div className="p-8 sm:p-12 flex items-center justify-center min-h-[160px] bg-gradient-to-br from-gray-50/50 via-white to-gray-50/30">{children}</div>
+      <div className="p-8 sm:p-14 flex items-center justify-center min-h-[180px] bg-gradient-to-b from-neutral-950 via-black to-neutral-950 overflow-x-auto">
+        {children}
+      </div>
 
       {isCodeVisible && (
-        <div className="border-t border-gray-200">
+        <div className="border-t border-neutral-800 bg-neutral-900/40">
           <CodeBlock code={code} />
         </div>
       )}
