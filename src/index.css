@@ -3,14 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-  --text-body: #bbbbbb;
-  --text-muted: #7e7e7e;
-  --surface-card: #141414;
-  --surface-elevated: #222222;
-  --surface-soft: #0d0d0d;
-  --hairline: #2e2e2e;
+  --bg-color: #ffffff;
+  --text-color: #0f172a;
+  --text-body: #475569;
+  --text-muted: #94a3b8;
+  --surface-card: #ffffff;
+  --surface-elevated: #f8fafc;
+  --surface-soft: #f1f5f9;
+  --hairline: #e2e8f0;
   
   /* BMW M Tricolor Brand Tokens */
   --m-blue-light: #0066b1;

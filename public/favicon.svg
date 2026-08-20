@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background Plate -->
+  <rect width="32" height="32" rx="7" fill="#000000"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" stroke="#262626" stroke-width="1"/>
+
+  <!-- Iconic BMW M Tricolor Slashes -->
+  <g transform="skewX(-18) translate(3, 0)">
+    <!-- Light Blue -->
+    <rect x="4" y="6" width="2.2" height="20" fill="#0066b1"/>
+    <!-- Dark Blue -->
+    <rect x="7" y="6" width="2.2" height="20" fill="#1c69d4"/>
+    <!-- M-Red -->
+    <rect x="10" y="6" width="2.2" height="20" fill="#e22718"/>
+  </g>
+
+  <!-- High-Precision 'E' Brand Letterform -->
+  <path d="M17 9.5H25.5V12.2H20.2V14.6H24.5V17.2H20.2V19.8H25.8V22.5H17V9.5Z" fill="#FFFFFF"/>
+</svg>
