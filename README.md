@@ -14,7 +14,7 @@
 
 <br />
 
-[Live Showcase](http://localhost:5173) • [Documentation](http://localhost:5173/components/button) • [Component Catalog](#component-catalog)
+[🌐 Live Showcase](https://ease-ui-web.vercel.app) • [Documentation](https://ease-ui-web.vercel.app/components/button) • [Component Catalog](#component-catalog)
 
 </div>
 
@@ -112,13 +112,13 @@ The component library is structured for intuitive navigation and composition:
 
 | Order | Component | Description | Key Variants & Features |
 | :---: | :--- | :--- | :--- |
-| `01` | **[Button](http://localhost:5173/components/button)** | Polymorphic interactive button | `primary`, `secondary`, `outline`, `destructive`, `ghost`, `dark`, `ok`, `link` |
-| `02` | **[Card](http://localhost:5173/components/card)** | Animated container block | `light`, `dark`, `outline`, aspect ratios, `float3D` / `jiggle` hover |
-| `03` | **[Modal](http://localhost:5173/components/modal)** | Animated dialog overlay | `light`, `dark`, `outline`, backdrop blur, animated mount/unmount |
-| `04` | **[Input](http://localhost:5173/components/input)** | Enhanced form input suite | `Input`, `FloatingLabelInput`, `InputWithIcon`, `PasswordInput`, `NumberInput`, `Textarea` |
-| `05` | **[Navbar](http://localhost:5173/components/navbar)** | Responsive navigation header | `light`, `dark`, `primary`, `glass`, custom children composition |
-| `06` | **[Tooltip](http://localhost:5173/components/tooltip)** | Contextual hover/focus popover | `top`, `bottom`, `left`, `right` placements, customizable delay & themes |
-| `07` | **[Badge](http://localhost:5173/components/badge)** | Status tags & numeric indicators | `default`, `secondary`, `destructive`, `outline`, `success`, `warning` |
+| `01` | **[Button](https://ease-ui-web.vercel.app/components/button)** | Polymorphic interactive button | `primary`, `secondary`, `outline`, `destructive`, `ghost`, `dark`, `ok`, `link` |
+| `02` | **[Card](https://ease-ui-web.vercel.app/components/card)** | Animated container block | `light`, `dark`, `outline`, aspect ratios, `float3D` / `jiggle` hover |
+| `03` | **[Modal](https://ease-ui-web.vercel.app/components/modal)** | Animated dialog overlay | `light`, `dark`, `outline`, backdrop blur, animated mount/unmount |
+| `04` | **[Input](https://ease-ui-web.vercel.app/components/input)** | Enhanced form input suite | `Input`, `FloatingLabelInput`, `InputWithIcon`, `PasswordInput`, `NumberInput`, `Textarea` |
+| `05` | **[Navbar](https://ease-ui-web.vercel.app/components/navbar)** | Responsive navigation header | `light`, `dark`, `primary`, `glass`, custom children composition |
+| `06` | **[Tooltip](https://ease-ui-web.vercel.app/components/tooltip)** | Contextual hover/focus popover | `top`, `bottom`, `left`, `right` placements, customizable delay & themes |
+| `07` | **[Badge](https://ease-ui-web.vercel.app/components/badge)** | Status tags & numeric indicators | `default`, `secondary`, `destructive`, `outline`, `success`, `warning` |
 
 ---
 
